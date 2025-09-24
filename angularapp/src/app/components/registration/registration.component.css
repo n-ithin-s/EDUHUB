@@ -1,0 +1,150 @@
+form {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('https://performmusicrentals.com/cdn/shop/files/Mensamarketing_WebsiteElementDesigns-PerformMusicRentals_1920x694px_AE_9-Sept-22-HomeBanner2_ff373205-99e7-441a-a03a-2651a8d3f8fc.png?v=1662968648');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container1{
+  margin-bottom: 200px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.regnav {
+  z-index: 1000;
+}
+
+.password-icon {
+  position: absolute;
+  right: 15%;
+  top: 59%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.container {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 20px;
+  width: 450px;
+  margin: auto;
+  height: auto;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 200px;
+  transition: all 6s;
+  height: 600px;
+}
+
+.container:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  
+}
+
+.container:hover input[type=text],
+.container:hover input[type=password],
+.container:hover select {
+  background: linear-gradient(90deg, white, rgb(232, 231, 231));
+  /* Same background color as the container */
+  transition-duration: 3s;
+  /* Smooth transition */
+}
+
+input[type=text],
+input[type=password],
+select {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #dde6dd;
+  width: 100%;
+  color: black;
+  padding: 14px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #0B7EA2;
+  font-weight: bold;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  background: rgba(55, 55, 55, .6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  width: 100%;
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+}
+
+.close {
+  font-size: 45px;
+
+  margin-top: 0%;
+  margin-right: 0%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+.password-icon {
+  position: absolute;
+  right: 6%;
+  top: 46%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-icon1 {
+  position: absolute;
+  right: 6%;
+  top: 58%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.eyepass {
+  position: relative;
+}
+
+.eyepassconfirm {
+  position: relative;
+
+}
+

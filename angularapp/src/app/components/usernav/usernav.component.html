@@ -1,0 +1,42 @@
+<div class="nav-container">
+    <div class="logo">
+
+        <h4>EDU-HUB</h4>
+
+        <!-- <img src="../../assets/eduhub basic.png" alt="EDU_HUB" height="78px" width="135px"> -->
+    </div>
+    <h5><span class="display">{{username}}</span> / Student</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="menu">
+        <a routerLink="/home">Home</a>&nbsp;&nbsp;&nbsp;
+        <a routerLink="/studentviewcourse">Courses</a>&nbsp;&nbsp;
+        <a routerLink="/mycourse">Enrolled Course</a>&nbsp;&nbsp;
+
+        <!-- <button class="log" (click)="logout()">Logout</button> -->
+        
+        <div class="dropdown">
+            <a routerLink="/feedbacks">Feedback</a>&nbsp;&nbsp;
+            <!-- <a href="" class="dropbtn">Feedback</a> -->
+            <div class="dropdown-content">
+                <a routerLink="/useraddfeedback">Post Feedback</a>
+                <a routerLink="/userviewfeedback">My Feedback</a>
+            </div>
+        </div>
+        <button class="log" (click)="onSubmit()">Logout</button>
+
+    </div>
+</div>
+
+<div *ngIf="showModal" class="modal">
+      <div class="modal-content">
+        <p style="color: red;">Are you sure you want to Logout???</p>
+        <button (click)="logout()" class="log-out">Yes,Logout</button>
+        <button (click)="closeModal()" class="cancel-button">Cancel</button>
+      </div>
+  </div>
+  <style>
+    .modal {
+    background:rgba(55,55,55,.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    }
+</style>

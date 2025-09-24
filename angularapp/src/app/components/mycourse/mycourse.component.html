@@ -1,0 +1,44 @@
+<app-usernav></app-usernav>
+<div class="container">
+    <h1>My Course</h1>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <div *ngIf="loader" class="loaderStyle" >
+        <app-loader></app-loader>
+    </div>
+    <table class="table" *ngIf="!loader">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Course Name</th>
+                <th>Enrollment Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- enrollmentId?:number;
+    user?:User;
+    course?:Course;
+    enrollmentDate?:Date;
+    status?:string; -->
+            <tr *ngFor="let enrollment of userEnrolled,let i = index">
+                <td>{{i+1}}</td>
+                <td>{{enrollment.course.title}}</td>
+                <td>{{enrollment.enrollmentDate}}</td>
+                <td>{{enrollment.status}}</td>
+                <td><button class="unenroll-button" (click)="onsubmit(enrollment.enrollmentId)">Unenroll</button></td>
+            </tr>
+        </tbody>
+    </table>
+ 
+    <div *ngIf="showModal" class="modal1">
+        <div class="modal-content1">
+          <h2>Are you sure you want to enroll in this course?</h2>
+          <button (click)="unenroll()" class="yes-enroll">Yes,Unenroll</button>
+          <button (click)="cancelModal()">Cancel</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+
+<div class="container1">
+
+
+
+    <form [formGroup]="registrationForm" (ngSubmit)="register()">
+        <div class="container">
+
+            <h2>Registration</h2>
+            <div>
+                <label for="username"><i class="fa fa-user-circle"></i> Username<span style="color: red;">*</span></label>
+                <br>
+                <input type="text" id="username" name="username" formControlName="username">
+                <div *ngIf="username.touched && username.invalid">
+                    <div *ngIf="username.errors?.required" style="color: red;">*Username is required</div>
+                </div>
+                <br>
+            </div>
+
+            <div>
+                <label for="email"><i class="fa fa-envelope"></i> Email<span style="color: red;">*</span></label>
+                <br>
+                <input type="text" id="email" name="email" formControlName="email">
+                <div *ngIf="email.touched && email.invalid">
+                    <div *ngIf="email.errors?.required" style="color: red;">*Email is required</div>
+                    <div *ngIf="email.errors?.email" style="color: red;">*Invalid email</div>
+                </div>
+                <br>
+            </div>
+
+
+            <div class="eyepass">
+
+                <label for="password"><i class="fa-solid fa-key"></i> Password<span class="required">*</span></label>
+                <input [type]="hidePassword ? 'password': 'text'" formControlName="password" required>
+
+                <i (click)="togglePasswordVisibility()" [ngClass]="hidePassword ? 'fas fa-eye-slash':'fas fa-eye'" class="password-icon"></i>
+                <div *ngIf="password.touched && password.invalid">
+                    <div *ngIf="password.errors?.required" style="color: red;">*Password is required</div>
+                    <div *ngIf="password.errors?.pattern" style="color: red;">*Password must include at least one
+                        uppercase letter,one lowercase letter,one digit and a special character</div>
+                </div>
+                <br>
+            </div>
+
+            <div class="eyepassconfirm">
+                <label for="confirmPassword"><i class="fa-solid fa-key"></i> Confirm Password<span style="color: red;">*</span></label>
+                <br>
+                <input [type]="hidePassword1 ? 'password': 'text'" formControlName="confirmPassword"
+                    (change)="passwordMatch()" required>
+
+                <i (click)="togglePasswordVisibility1()" [ngClass]="hidePassword1 ? 'fas fa-eye-slash':'fas fa-eye'" class="password-icon1"></i>
+                <div *ngIf="password.touched && password.invalid">
+
+                    <div *ngIf="confirmPassword.errors?.required" style="color: red;">*Confirm Password is required
+                    </div>
+                </div>
+                <br>
+                
+            </div>
+            <div id="matherror" style="color: red;"></div>
+
+            <div>
+                <label for="mobileNumber"><i class="fa-solid fa-phone"></i> Mobile Number<span style="color: red;">*</span></label>
+                <br>
+                <input type="text" id="mobileNumber" name="mobileNumber" formControlName="mobileNumber">
+                <div *ngIf="mobileNumber.touched && mobileNumber.invalid">
+                    <div *ngIf="mobileNumber.errors?.required" style="color: red;">*Mobile Number is required</div>
+                    <div *ngIf="mobileNumber.errors?.pattern" style="color: red;">*Mobile number should be of 10 digits
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <label for="role"><i class="fa fa-user-plus"></i> Role<span style="color: red;">*</span></label>
+            <select name="role" formControlName="role">
+                <option value="">Select</option>
+                <option value="EDUCATOR">Educator</option>
+                <option value="STUDENT">Student</option>
+            </select>
+            <div *ngIf="role.touched && role.invalid">
+                <div *ngIf="role.errors?.required" style="color: red;">* role is required</div>
+
+            </div>
+            <br>
+
+
+            <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+        </div>
+
+        <div class="modal" *ngIf="showInvalidCredentialsModal">
+            <div class="modal-content">
+                <div class="close" (click)="closeModal()"><b>&times;</b></div>
+                <div style="color: red;font-weight: bolder;">User Already Exists!!! <br>Try again.</div>
+            </div>
+        </div>
+
+
+    </form>
+
+</div>

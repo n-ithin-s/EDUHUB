@@ -1,0 +1,132 @@
+<!-- <app-usernav></app-usernav>
+<div class="container">
+    <h1>Available Courses</h1>
+    <br>
+    <hr>
+    <br>
+    <div class="dropdown">
+        <input type="text" id="search" [(ngModel)]="search" placeholder="Search" (input)="searchData()">
+    </div>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Course Name</th>
+                <th>Course Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{course.title}}</td>
+                <td>{{course.description}}</td>
+                <td>{{course.courseStartDate}}</td>
+                <td>{{course.courseEndDate}}</td>
+ 
+ 
+ 
+                <td>
+                    <button (click)="showModal1(course.courseid)">Enroll</button>
+                <button (click)="studentViewMaterial(course.courseid)">View Material</button></td>
+ 
+ 
+                <td><button (click)="showModal1(course.courseid)">Enroll</button><button (click)="studentViewMaterial(course.courseid)">View Material</button></td>
+ 
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf="showModal" class="modal">
+        <div class="modal-content">
+          <h2>Are you sure you want to enroll in this course?</h2>
+ 
+          <button (click)="studentEnrollCourse(showModal)">Yes,Enroll</button>
+ 
+          <button (click)="studentEnrollCourse()">Yes,Enroll</button>
+ 
+          <button (click)="cancelModal()">Cancel</button>
+        </div>
+    </div>
+    <div *ngIf="showMaterial" class="modal">
+        <div class="modal-content">
+            <button class ="back" (click)="back()">Back</button>
+            <h3>Materials</h3>
+            <p><b>Course:{{material.title}}</b></p>
+            <p>{{material.title}}</p>
+            <p>Description:{{material.description}}</p>
+            <p>URL:{{material.url}}</p>
+            <p>Upload Date:{{material.uploadDate}}</p>
+        </div>
+    </div>
+</div> -->
+ 
+ 
+ 
+<app-usernav></app-usernav>
+<div class="container">
+  <h1>Available Courses</h1>
+    <br>
+    <hr>
+    <br>
+    <div class="dropdown">
+        <input type="text" id="search" [(ngModel)]="search" placeholder="Search" (input)="searchData()">
+    </div>
+    <br>
+    <div *ngIf="loader" class="loaderStyle" >
+        <app-loader></app-loader>
+    </div>
+    <table class="table" *ngIf="!loader">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Course Name</th>
+                <th>Course Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{course.title}}</td>
+                <td>{{course.description}}</td>
+                <td>{{course.courseStartDate}}</td>
+                <td>{{course.courseEndDate}}</td>
+                <td><button class="enroll-button" (click)="showModal1(course.courseid)"  *ngIf="!isApplied(course.courseid)">Enroll</button>
+                    <button class="enrolled-button" *ngIf="isApplied(course.courseid)" style="background-color: red;">Enrolled</button>
+                    <button class="view-material-button" (click)="studentViewMaterial(course.courseid)" *ngIf="viewMaterialPower(course.courseid)">View Material</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf="showModal" class="modal1">
+        <div class="modal-content1">
+          <h2>Are you sure you want to enroll in this course?</h2>
+          <button (click)="studentEnrollCourse()" class="yes-enroll" >Yes,Enroll</button>
+          <button (click)="cancelModal()">Cancel</button>
+        </div>
+    </div>
+    <div *ngIf="showMaterial" class="modal">
+        <div class="modal-content">
+            <button (click)="cancelMaterial()" class="close-button">Close</button>
+            <h1><b>Materials</b></h1>
+            <hr>
+            <div class="card-container">
+                <div *ngFor="let material of materials; index as i" class="card">
+                    <h2><b>Course: {{material.course.title}}</b></h2>
+                    <hr style="color: blue;">
+                    <h3><b>{{material.title}}</b></h3>
+                    <h4><b>Description:</b> {{material.description}}</h4>
+                    <h4>URL: <a href="{{material.url}}" target="_blank">click here</a></h4>
+                    <iframe [src]="getSafeUrl(material.youTube)" frameborder="0"></iframe>
+                    <!-- <button (click)="onsubmit(material.materialId)" class="delete-button" >Delete</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

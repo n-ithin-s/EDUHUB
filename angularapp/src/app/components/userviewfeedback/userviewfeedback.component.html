@@ -1,0 +1,48 @@
+<app-usernav></app-usernav>
+<div class="container">
+    <h1>My Feedback</h1>
+
+    <br>
+    <hr>
+    <br>
+    <div *ngIf="loader" class="loaderStyle" >
+      <app-loader></app-loader>
+    </div>
+    
+    <div *ngIf="!loader">
+      <table *ngIf="feedbacks.length > 0; else noFeedbacks">
+
+      <thead>
+        <tr>
+          <th>S.No.</th>
+          <th>Feedback</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let feedback of feedbacks,index as i">
+            <td>{{i+1}}</td>    
+          <td>{{feedback.feedbackText}}</td>
+          <td><button (click)="onSubmit(feedback.feedbackId)" class="delete-m">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #noFeedbacks>
+      <div class="no-feedbacks">
+        <h2>There are no feedbacks!</h2>
+        <h2>Please give some feedback!</h2>
+      </div>
+    </ng-template>
+  </div>
+
+
+
+</div>
+
+    <div *ngIf="showModal" class="modal">
+      <div class="modal-content">
+        <p>Are you sure you want to delete?</p>
+        <button (click)="deleteFeedback()" class="delete-button">Yes,Delete</button>
+        <button (click)="closeModal()" class="cancel-button">Cancel</button>
+      </div>
+  </div>

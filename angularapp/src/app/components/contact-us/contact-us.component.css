@@ -1,0 +1,81 @@
+.contact-us {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+    
+  }
+ 
+  .contact-us .container {
+    max-width: 1200px;
+    margin:auto;
+    padding: 0 20px;
+    margin-top: 50px;
+  }
+ 
+  .contact-us h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+ 
+  .contact-us h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    color: #0056b3;
+  }
+ 
+  .contact-us p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+ 
+  .contact-us ul {
+    list-style-type: none;
+    padding: 0;
+  }
+ 
+  .contact-us ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+ 
+  .contact-us ul li i {
+    margin-right: 10px;
+    color: #007bff;
+  }
+ 
+  .contact-us .form-group {
+    margin-bottom: 20px;
+  }
+ 
+  .contact-us .form-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+ 
+  .contact-us .form-group input,
+  .contact-us .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+ 
+  .contact-us button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ 
+  .contact-us button:hover {
+    background-color: #0056b3;
+  }

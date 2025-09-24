@@ -1,0 +1,37 @@
+<app-adminnav></app-adminnav>
+<form   (ngSubmit)="updateCourse()" class="form-container">
+   <div class="form-header"><h1>Edit Course</h1>
+    <button class="back" (click)="back()">Back</button></div> 
+    <hr>
+    <div>
+        <label for="title">Course Title<span>*</span></label><br>
+        <input type="text" name="title" id="title" [(ngModel)]="title" placeholder="Course Title">
+    </div><br>
+    <div>
+        <label for="description">Description<span>*</span></label><br>
+        <input type="text" name="description" id="description" [(ngModel)]="description" placeholder="Course Description">
+    </div><br>
+    <div>
+        <label for="courseStartDate">Course Start Date<span>*</span></label><br>
+        <input [(ngModel)]="courseStartDate" name="courseStartDate" type="date" />
+    </div><br>
+    <div>
+        <label for="courseEndDate">Course End Date<span>*</span></label><br>
+        <input [(ngModel)]="courseEndDate" name="courseEndDate" type="date" />
+    </div><br>
+    <div>
+        <label for="category">Course Category<span>*</span></label><br>
+        <input type="text" name="category" id="category" [(ngModel)]="category" placeholder="Course Category">
+    </div><br>
+    <div>
+        <label for="level">Course Level<span>*</span></label><br>
+        <select name="level" id="level" [(ngModel)]="level">
+            <option value="">Select level</option>
+            <option value="Beginner">Beginner</option> 
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advance">Advance</option>
+        </select>
+    </div><br>
+    <button type="submit" >Update Course</button>
+</form>
+

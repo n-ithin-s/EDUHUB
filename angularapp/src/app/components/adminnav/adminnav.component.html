@@ -1,0 +1,40 @@
+<div class="nav-container">
+    <div class="logo">
+
+        <h4>EDU-HUB</h4>
+
+    </div>
+    <h5>{{username}} / Educator</h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="menu">
+        <a routerLink="/home">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class="dropdown">
+            <a href="" class="dropbtn">Course</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="dropdown-content">
+                <a routerLink="/educatoraddcourse">Add Course</a>
+                <a routerLink="/educatorviewcourse">View Course</a>
+            </div>
+        </div>
+
+    
+
+        <a routerLink="/enrollmentlist">Enrollment Request</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <a routerLink="/adminviewfeedback">Feedbacks</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="log" (click)="onSubmit()">Logout</button>
+    </div>
+</div>
+<div *ngIf="showModal" class="modal">
+    <div class="modal-content">
+      <p style="color: red;">Are you sure you want to Logout???</p>
+      <button (click)="logout()" class="log-out">Yes,Logout</button>
+      <button (click)="closeModal()" class="cancel-button">Cancel</button>
+    </div>
+</div>
+<style>
+    .modal {
+    background:rgba(55,55,55,.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    }
+</style>

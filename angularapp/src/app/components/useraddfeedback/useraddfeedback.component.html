@@ -1,0 +1,26 @@
+<app-usernav></app-usernav>
+<div class="container">
+    <h1>Add Feedback</h1>
+    <form  (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="feedback">Feedback*</label>
+        <textarea id="feedback" [(ngModel)]="feedback" name="feedback" class="form-control" required ></textarea>
+        
+      </div>
+      <button type="submit" class="btn btn-primary" >Submit</button>
+
+      <div *ngIf="showModal" class="modal">
+        <div class="modal-content">
+          <p>Successfully added!</p>
+          <button (click)="closeModal()">OK</button>
+        </div>
+    </div>
+    </form>
+  </div>
+  <style>
+    .modal {
+    background:rgba(55,55,55,.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    }
+     </style>

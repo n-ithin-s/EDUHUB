@@ -1,0 +1,80 @@
+<app-adminnav></app-adminnav>
+
+<div class="container">
+  <button style="margin-left: 560px; height: fit-content;color: black;"><a routerLink="/educatorviewcourse">Back</a></button>
+  <form [formGroup]="addMaterialForm" (ngSubmit)="addMaterial()">
+        <div style="display: flex; align-items: center;">
+           
+            <h2 style="margin-left: 220px;">Add Material</h2>
+          </div>  
+       
+        <div class="form-group">
+            <label for="title">Title<span style="color: red;">*</span></label>
+            <br>
+            <input type="text" id="title" formControlName="title">
+            <br>
+            <div *ngIf="title.invalid && title.touched">
+              <div *ngIf="title.errors?.required style" style="color: red;">*Title is required</div>
+            </div>
+            <br>
+        </div>
+ 
+        <div class="form-group">
+            <label for="description">Description<span style="color: red;">*</span></label>
+            <br>
+            <input type="text" id="description" formControlName="description">
+            <br>
+            <div *ngIf="description.invalid && description.touched">
+              <div *ngIf="description.errors?.required style" style="color: red;">*Description is required</div>
+            </div>
+            <br>
+        </div>
+ 
+        <div class="form-group">
+            <label for="url">URL<span style="color: red;">*</span></label>
+            <br>
+            <input type="text" id="url" formControlName="url">
+            <br>
+            <div *ngIf="url.invalid && url.touched">
+              <div *ngIf="url.errors?.required style" style="color: red;">*URL is required</div>
+            </div>
+            <br>
+        </div>
+        
+        <div class="form-group">
+          <label for="url">YOU TUBE<span style="color: red;">*</span></label>
+          <br>
+          <input type="text" id="youTube" formControlName="youTube">
+          <br>
+          <div *ngIf="youTube.invalid && youTube.touched">
+            <div *ngIf="youTube.errors?.required style" style="color: red;">*URL is required</div>
+          </div>
+          <br>
+      </div>
+ 
+        <div class="form-group">
+            <label for="contentType">Content Type<span style="color: red;">*</span></label>
+            <br>
+            <input type="text" id="contentType" formControlName="contentType">
+            <br>
+            <div *ngIf="contentType.invalid && contentType.touched">
+              <div *ngIf="contentType.errors?.required style" style="color: red;">*Content Type is required</div>
+            </div>
+            <br>
+        </div>
+ 
+            <div class="btn">
+                <button type="submit">Submit</button>
+            </div>
+ 
+  </form>
+ 
+    <div *ngIf="showModel" class="modal">
+        <div class="modal-content">
+        <p>Material successfully added!</p>
+        <button (click)="closeModal()">OK</button>
+        </div>
+    </div>
+ 
+   
+</div>

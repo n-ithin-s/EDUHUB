@@ -1,0 +1,31 @@
+<div class="about-us">
+  <div *ngIf="!role">
+    <app-navbar></app-navbar>
+</div>
+<div *ngIf="role=='EDUCATOR'">
+    <app-adminnav></app-adminnav>
+</div>
+<div *ngIf="role=='STUDENT'">
+    <app-usernav></app-usernav>
+</div>
+    <div class="container">
+      <h1>About Us</h1>
+      <p>Welcome to EDU-HUB, a comprehensive educational platform designed to enhance learning experiences for both educators and students.</p>
+     
+      <h2>Our Mission</h2>
+      <p>Our mission is to provide a seamless and interactive educational environment that fosters learning and growth. We aim to bridge the gap between educators and students by offering a platform that is both user-friendly and resource-rich.</p>
+     
+      <h2>Our Vision</h2>
+      <p>We envision a world where education is accessible to everyone, regardless of geographical or socio-economic barriers. Our platform is designed to make learning engaging, interactive, and effective.</p>
+     
+      <h2>Our Team</h2>
+      <p>Our team is composed of dedicated professionals who are passionate about education and technology. We work tirelessly to ensure that EDU-HUB meets the highest standards of quality and innovation.</p>
+     
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need support, feel free to reach out to us:</p>
+      <ul>
+        <li>Email: support@edu-hub.com</li>
+        <li>Phone: +123 456 7890</li>
+      </ul>
+    </div>
+  </div>

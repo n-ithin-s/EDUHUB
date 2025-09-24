@@ -1,0 +1,104 @@
+/*
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    width: 70%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin:auto;
+    padding:10px;
+    border-radius: 8px;
+}
+p{
+    font-size: 1.2em;
+    line-height: 1.6;
+} */
+/* General styles */
+/* body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+} */
+ 
+.container-1 {
+    max-width: 800px;
+    padding: 20px;
+    /* background-color: white; */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0.5, 0.4, 0.3, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+    margin-left: 265px;
+    position: absolute;
+    margin-top: 180px;
+   
+   
+}
+.container-1:hover{
+    max-width: 800px;
+    padding: 20px;
+    /* background-color: white; */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0.2, 0.3, 0.4, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+    margin-left: 265px;
+    position: absolute;
+    margin-top: 180px;
+ 
+}
+ 
+.welcome {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+ 
+p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+}
+ 
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+ 
+    .welcome {
+        font-size: 1.5em;
+    }
+ 
+    p {
+        font-size: 0.9em;
+    }
+}
+.image-container{
+    background-image: url('https://performmusicrentals.com/cdn/shop/files/Mensamarketing_WebsiteElementDesigns-PerformMusicRentals_1920x694px_AE_9-Sept-22-HomeBanner2_ff373205-99e7-441a-a03a-2651a8d3f8fc.png?v=1662968648');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    /* margin: auto; */
+}

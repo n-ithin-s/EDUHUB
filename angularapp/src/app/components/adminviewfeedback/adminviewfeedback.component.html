@@ -1,0 +1,54 @@
+<app-adminnav></app-adminnav>
+<div class="container">
+  <h1>Feedback Details</h1>
+    
+    <hr><br><br>
+
+    <div *ngIf="loader" class="loaderStyle" >
+    <app-loader></app-loader>
+    </div>
+    <table *ngIf="!loader">
+
+      <thead>
+        <tr>
+          <th class="thleft">S.No.</th>
+          <th>User Name</th>
+          <th>Feedback</th>
+          <th>Posted Date</th> 
+          <th class="thright">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let feedback of feedbacks,index as i">
+            <td>{{i+1}}</td>    
+          <td>{{feedback.user.username}}</td>
+          <td>{{feedback.feedbackText}}</td>
+          <td>{{feedback.date}}</td>
+          <td><button (click)="onSubmit(feedback.user.userId)">Show Profile</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+
+
+ <div *ngIf="showModal" class="modal">
+      <div class="modal-content">
+        <h3>User Details</h3>
+        <p>Email: {{user.email}}</p>
+        <p>Username: {{user.username}}</p>
+        <p>Mobile Number: {{user.mobileNumber}}</p>
+        
+        <button (click)="closeModal()" class="cancel-button">Close</button>
+      </div>
+  </div>
+  <style>
+    .modal {
+    background:rgba(55,55,55,.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    }
+     </style>
+  
+
+

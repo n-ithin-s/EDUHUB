@@ -1,0 +1,93 @@
+<app-adminnav></app-adminnav>
+<form [formGroup]="addForm" (ngSubmit)="addCourse()" class="form-container">
+    <div class="form-header">
+        <h1>Create New Course</h1>
+        <button class="back" (click)="back()">Back</button>
+
+    </div>
+    <hr>
+    <div>
+        <label for="title">Course Title<span>*</span></label><br>
+        <input type="text" name="title" id="title" formControlName="title" placeholder="Course Title">
+        <div *ngIf="title.touched && title.invalid">
+            <span *ngIf="title.errors?.required">*Course Title is required</span>
+        </div>
+    </div><br>
+    <div>
+        <label for="description">Description<span>*</span></label><br>
+        <input type="text" name="description" id="description" formControlName="description" placeholder="Course Description">
+        <div *ngIf="description.touched && description.invalid">
+            <span *ngIf="description.errors?.required">*Description is required</span>
+        </div>
+    </div><br>
+    <div>
+        <label for="courseStartDate">Course Start Date<span>*</span></label><br>
+        <input type="date" name="courseStartDate" id="courseStartDate" formControlName="courseStartDate" (blur)="validateStartDate()">
+        <div *ngIf="courseStartDate.touched && courseStartDate.invalid">
+            <span *ngIf="courseStartDate.errors?.required">*Course Start Date is required</span>
+        </div>
+        <div *ngIf="courseStartDate.errors?.newInvalid" class="error-message">
+            *The start date should start from current date.
+          </div>
+    </div><br>
+    <div>
+        <label for="courseEndDate">Course End Date<span>*</span></label><br>
+        <input type="date" name="courseEndDate" id="courseEndDate" formControlName="courseEndDate" (blur)="validateDates()">
+        <div *ngIf="courseStartDate.touched && courseStartDate.invalid">
+            <span *ngIf="courseStartDate.errors?.required">*Course End Date is required</span>
+        </div>
+        <div *ngIf="courseEndDate.errors?.invalid" class="error-message">
+            *The start date should be before the end date.
+          </div>
+    </div><br>
+    <div>
+        <label for="category">Course Category<span>*</span></label><br>
+        <input type="text" name="category" id="category" formControlName="category" placeholder="Course Category">
+        <div *ngIf="category.touched && category.invalid">
+            <span *ngIf="category.errors?.required">*Category is required</span>
+        </div>
+    </div><br>
+    <div>
+        <label for="level">Course Level<span>*</span></label><br>
+        <select name="level" id="level" formControlName="level">
+            <option value="">Select level</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advance">Advance</option>
+        </select>
+        <div *ngIf="level.touched && level.invalid">
+            <span *ngIf="level.errors?.required">*Level is required</span>
+        </div>
+    </div><br>
+    <div *ngIf="addForm.invalid && (addForm.touched || addForm.dirty)">
+        <span>*All fields are required</span>
+    </div>
+    <button type="submit" [disabled]="addForm.invalid">Submit</button>
+    
+</form>
+<!-- <div *ngIf="showModal" class="modal">
+    <div class="modal-content">
+      <p>Successfully Added!</p> 
+      <button (click)="closeModal()">OK</button>
+    </div>
+</div> -->
+<div *ngIf="showModal1" class="modal1">
+    <div class="modal-content1">
+      <p>Course Already Exist!</p> 
+      <button (click)="closeModal()">OK</button>
+    </div>
+</div>
+<style>
+    .modal {
+    background:rgba(55,55,55,.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    }
+</style>
+<style>
+    .modal1 {
+    background:rgba(55,55,55,.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    }
+</style>

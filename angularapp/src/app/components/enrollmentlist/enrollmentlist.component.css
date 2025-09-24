@@ -1,0 +1,246 @@
+.container{
+    margin: auto;
+    padding: 45px;
+
+    margin-top: 40px;
+  margin-bottom: 200px;
+  border-radius: 13px;
+ 
+}
+h1 {
+  text-align: center;
+  justify-content: center;
+  color: #007BFF; /* Initial color */
+  font-family: 'Arial', sans-serif; /* Change this to any font you like */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Gives the text a slight shadow, making it pop out */
+  animation: zoomInOut 2s infinite, colorChange 5s infinite; /* Applies the animations */
+  }
+   
+   
+  @keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1.1); /* Start and end at normal size */
+    }
+    50% {
+        transform: scale(1.2); /* At 50% of the animation duration, scale up a bit */
+    }
+    }
+   
+    @keyframes colorChange {
+    0% { color: #bec6cf; } /* Blue */
+      25% { color: #515e81; } /* Green */
+      50% { color: #672c28; } /* Red */
+      75% { color: #7d7740; } /* Yellow */
+      100% { color: #869fba; } /* Blue */
+    }
+   
+    h1:hover {
+    color: #4CAF50; /* Changes the color of the text when hovered over */
+    }
+hr{
+    border: 2px solid  rgb(47, 96, 145);
+    width: 100%;
+}
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+.dropdown input[type="text"] {
+    flex: 1;
+    margin-right: 650px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.dropdown {
+    display: flex;
+    align-items: center;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 13px;
+}
+ 
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+ 
+.table th {
+    /* background-color: rgb(47, 96, 145); */
+    background-color: #0B7EA2;
+    color:white;
+    text-align: center;
+   
+}
+.thleft{
+  border-top-left-radius: 13px; /* Adjust the value as needed */
+
+}
+.thright{
+ 
+  border-top-right-radius: 13px;
+}
+
+
+ 
+  .actions button {
+    margin-right: 5px;
+  }
+
+  .modal{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    border-radius: 5%;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+    text-align: center;
+  }
+  .modal-content h2 {
+    color: green;
+  }
+
+ 
+  .modal-content p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .modal-content h3{
+    text-align: center;
+  }
+ 
+  
+
+  .cancel-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+}
+
+.cancel-button:hover {
+    background-color: darkred;
+    color: white;
+}
+
+tr{
+  border-radius: 13px;
+}
+tr:hover {
+  background-color: #e9e9e9;
+}
+table:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increases the shadow when the table is hovered over */
+}
+
+.btn button {
+  padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 5px; /* Rounded corners */
+}
+.approve:hover{
+  background-color: #0B7EA2;
+  color: #fff; /* Lighter text color on hover for contrast */
+  transform: scale(1.1); /* Makes the button slightly larger */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Larger box-shadow on hover for 3D effect */
+}
+.reject:hover{
+  background-color: #0B7EA2;
+  color: #fff; /* Lighter text color on hover for contrast */
+  transform: scale(1.1); /* Makes the button slightly larger */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Larger box-shadow on hover for 3D effect */
+}
+.show:hover{
+  background-color: #0B7EA2;
+  color: #fff; /* Lighter text color on hover for contrast */
+  transform: scale(1.1); /* Makes the button slightly larger */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Larger box-shadow on hover for 3D effect */
+}
+
+.btn button:hover {
+  /* background-color: darkred; */
+  color: #fff; /* Lighter text color on hover for contrast */
+  transform: scale(1.1); /* Makes the button slightly larger */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Larger box-shadow on hover for 3D effect */
+}
+
+.btn button[style*="background-color: green;"] {
+  background-color: green;
+}
+.btn button[style*="background-color: red;"] {
+  background-color: red;
+}
+
+.btn button[style*="background-color: skyblue;"] {
+  background-color: skyblue;
+}
+
+.btn button[style*="background-color: antiquewhite;"] {
+  background-color: antiquewhite;
+  /* color: black; */
+}
+.in input[type="text"] {
+  flex: 1;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 780px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transform transition */
+}
+ 
+.in input[type="text"]:focus {
+  border-color: #007BFF; /* Blue border on focus */
+  box-shadow: 0 0 8px 0 rgba(0,123,255,0.1); /* Slightly glowing blue shadow on focus */
+  transform: scale(1.05); /* Slightly increase the size of the input box on focus */
+  outline: none; /* Removes the default browser outline */
+}
+.in input[type="text"] {
+ 
+ 
+    background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 40px;
+    box-shadow: none;
+    -webkit-appearance: none;
+ 
+}
+.in {
+  display: flex;
+  align-items: center;
+}
+ .loaderStyle{
+  margin-left: 550px;
+ }

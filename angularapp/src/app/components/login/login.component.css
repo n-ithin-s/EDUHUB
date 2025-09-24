@@ -1,0 +1,140 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url('https://performmusicrentals.com/cdn/shop/files/Mensamarketing_WebsiteElementDesigns-PerformMusicRentals_1920x694px_AE_9-Sept-22-HomeBanner2_ff373205-99e7-441a-a03a-2651a8d3f8fc.png?v=1662968648');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-container {
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 100px;
+
+}
+
+.form-group {
+    margin-bottom: 10px;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #dde6dd;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0B7EA2;
+    font-weight: bold;
+    color: white;
+    
+}
+
+a {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+.required {
+    color: red;
+}
+
+.error {
+    color: red;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.password-icon {
+    position: absolute;
+    right: 15%;
+    top: 59%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    background:rgba(55,55,55,.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    width: 100%;
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    font-size: 45px;
+
+    margin-top: 0%;
+    margin-right: 0%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}

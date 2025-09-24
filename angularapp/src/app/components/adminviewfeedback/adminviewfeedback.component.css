@@ -1,0 +1,152 @@
+.container {
+   
+    width:full;
+    max-width: 80%;
+    margin:auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-bottom: 250px;
+
+  }
+  h1 {
+    text-align: center;
+    justify-content: center;
+    color: #007BFF; /* Initial color */
+    font-family: 'Arial', sans-serif; /* Change this to any font you like */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Gives the text a slight shadow, making it pop out */
+    animation: zoomInOut 2s infinite, colorChange 5s infinite; /* Applies the animations */
+    }
+     
+     
+    @keyframes zoomInOut {
+      0%, 100% {
+          transform: scale(1.1); /* Start and end at normal size */
+      }
+      50% {
+          transform: scale(1.2); /* At 50% of the animation duration, scale up a bit */
+      }
+      }
+     
+      @keyframes colorChange {
+      0% { color: #bec6cf; } /* Blue */
+        25% { color: #515e81; } /* Green */
+        50% { color: #672c28; } /* Red */
+        75% { color: #7d7740; } /* Yellow */
+        100% { color: #869fba; } /* Blue */
+      }
+     
+      h1:hover {
+      color: #4CAF50; /* Changes the color of the text when hovered over */
+      }
+  table:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increases the shadow when the table is hovered over */
+  }
+  table{
+    border-radius: 13px;
+  }
+  .thleft{
+    border-top-left-radius: 13px; /* Adjust the value as needed */
+  
+  }
+  .thright{
+   
+    border-top-right-radius: 13px;
+  }
+  
+  hr{
+    border: none;
+    height: 3px;
+    background-color: rgb(16, 125, 168);
+  }
+  tr:hover {
+    background-color: #e9e9e9;
+  }
+  table {
+
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    
+  }
+  th{
+    color: white;
+    padding-top: 20%;
+    /* background-color: rgb(16, 125, 168); */
+    background-color: #0B7EA2;
+  }
+  
+  th, td {
+    
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  
+  button {
+    background-color:#0B7EA2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+  }
+
+  .modal{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .modal-content {
+    border-radius: 5%;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+    text-align: center;
+  }
+  .modal-content h2 {
+    color: green;
+  }
+  .modal-content h3{
+    text-align: center;
+  }
+  
+  .modal-content p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  .cancel-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+}
+
+.cancel-button:hover {
+    background-color: darkred;
+    color: white;
+}
+.loaderStyle{
+  margin-left: 460px;
+ }

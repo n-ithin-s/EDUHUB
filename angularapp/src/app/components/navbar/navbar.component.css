@@ -1,0 +1,70 @@
+.nav-container{
+    z-index: 1000000;
+    display: flex;
+    position: fixed;
+    width: 95.9%;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.7rem;
+    background-color: #0B7EA2;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+ 
+}
+.menu{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover{
+    font-size: x-large;
+    transition-duration: 5s;
+}
+.menu a {
+    padding: 10px;
+    text-decoration: none;
+    /* color: black; */
+}
+ 
+.menu a.active-link {
+    background: linear-gradient(90deg,#0B7EA2, #FF7E5F, #FD3A69);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+ 
+ 
+.edu{
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    color: #D3D3D3; /* Light Grey */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increased spacing for elegance */
+    text-transform: uppercase; /* Makes the text uppercase */
+    background-color: white; /* Gradient background with light grey colors */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+    padding: 10px 20px; /* Adds some padding */
+    border-radius: 5px; /* Rounds the corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+ 
+.edu:hover {
+    color: #E0E0E0; /* Changes to a slightly lighter grey on hover */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
+    transform: scale(1.05); /* Slightly enlarges the text on hover */
+}
+ 
+ 

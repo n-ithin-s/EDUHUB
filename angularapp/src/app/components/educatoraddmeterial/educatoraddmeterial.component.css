@@ -1,0 +1,120 @@
+.container {
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container:hover{
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0.2, 0.3, 0.4, 0.5);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+a{
+  color: black;
+}
+
+button {
+  /* background-color: #007bff; */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: black;
+  background-color: #0B7EA2;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+div[style="color: red;"] {
+  color: red;
+  font-size: 0.9em;
+}
+
+.btn {
+  text-align: center;
+}
+
+.btn button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  /* background-color: #28a745; */
+
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn button[type="submit"]:hover {
+  /* background-color: #218838; */
+  
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background:rgba(55,55,55,.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+input[type=text], input[type=password], select {
+ 
+  border: none;
+ 
+  border-bottom: 2px solid #ccc;
+  outline: none; 
+  width: 100%;
+  padding:12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 20px;
+}

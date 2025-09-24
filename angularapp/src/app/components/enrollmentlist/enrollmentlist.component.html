@@ -1,0 +1,74 @@
+<app-adminnav></app-adminnav> 
+<div class="container">
+    <h1>Enrollments</h1>
+    <hr>
+    <div class="dropdown">
+        <div class="in">
+            <input type="text" id="search" [(ngModel)]="search" placeholder="Search..." (input)="searchData()">
+        </div>
+    <p>Filter by Status: </p> &nbsp;
+    <select id="filter" [(ngModel)]="selectedStatus" (change)="filterEnrollments()">
+        <option value="All" selected>All</option>
+        <option value="Approved">Approved</option>
+        <option value="Rejected">Rejected</option>
+        <option value="Pending">Pending</option>
+    </select>
+    </div>
+
+    <div *ngIf="loader" class="loaderStyle" >
+        <app-loader></app-loader>
+      </div>
+
+    <table class="table" *ngIf="!loader">
+
+        <thead>
+            <tr>
+                <th class="thleft">S.No</th>
+                <th>Username</th>
+                <th>Course Title</th>
+                <th>Enrollment Date</th>
+                <th>Status</th>
+                <th class="thright">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let enrollment of enrollments;let i = index" class="tr">
+                <td>{{i+1}}</td>
+                <td>{{enrollment.user.username}}</td>
+                <td>{{enrollment.course.title}}</td>
+                <td>{{enrollment.enrollmentDate}}</td>
+                <td>{{enrollment.status}}</td>
+
+                <td class="btn">
+                    <button *ngIf="enrollment.status === 'Rejected' || enrollment.status === 'Pending'" (click)="acceptEnrollment(enrollment)" class="approve">Approve</button>
+                    <button *ngIf="enrollment.status === 'Approved' || enrollment.status === 'Pending'" (click)="rejectEnrollment(enrollment)" class="reject">Reject</button>
+                    <button (click)="showMore(enrollment.user.userId)" class="show">Show More</button>
+
+                  </td>
+            </tr>
+        </tbody>
+    </table>
+
+ 
+</div>
+ 
+<div *ngIf="showModal" class="modal">
+    <div class="modal-content">
+      <h3>User Details</h3>
+      <p>Email: {{user.email}}</p>
+      <p>Username: {{user.username}}</p>
+      <p>Mobile Number: {{user.mobileNumber}}</p>
+     
+      <button (click)="closeModal()" class="cancel-button">Close</button>
+    </div>
+</div>
+<style>
+    .modal {
+    background:rgba(55,55,55,.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    }
+     </style>
+
+  
+

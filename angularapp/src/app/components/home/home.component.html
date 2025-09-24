@@ -1,0 +1,19 @@
+<div >
+    <div *ngIf="!role">
+        <app-navbar></app-navbar>
+    </div>
+    <div *ngIf="role=='EDUCATOR'">
+        <app-adminnav></app-adminnav>
+    </div>
+    <div *ngIf="role=='STUDENT'">
+        <app-usernav></app-usernav>
+    </div>
+    <!-- <app-navbar></app-navbar> -->
+        <div class="image-container">
+            <div class="container-1">
+            <h1 class="welcome">Edu-HUB</h1>
+            <p>Edu-HUB is an all-in-one educational platform designed to enhance the learning experience for students and educators alike. It provides a comprehensive suite of tools for course management, content delivery, and interactive engagement. With Edu-HUB, eductors can easily create and manage courses, while students can access learning materials, participate in discussion, and track their progress. The platform also includes features for collaboration, assessment, and analytics,providing valuable insights for informed decision-making. withits user-friendly interface and robust functionality,Edu-HUB empowers everyone invloved in the educational process to achieve their goals more effectively.</p>
+            </div>
+        </div>
+     
+    </div>
